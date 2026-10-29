@@ -1,0 +1,59 @@
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 280px;
+    height: clamp(280px, 30vw, 520px);
+    position: relative;
+    overflow: hidden;
+}
+
+.banner::after {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background-color: rgba(12, 18, 24, 0.2);
+    content: "";
+}
+
+.bannerText {
+    position: relative;
+    z-index: 20;
+    width: min(90%, 900px);
+    padding: 24px;
+    text-align: center;
+    color: white;
+    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.75);
+}
+
+.bannerText h1 {
+    margin: 0;
+    color: #fff8e7;
+    font-size: clamp(2.25rem, 5.5vw, 5.25rem);
+    line-height: 1.02;
+    font-weight: 800;
+    letter-spacing: 0;
+    text-wrap: balance;
+}
+
+.bannerText h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin: 22px 0 0;
+    color: #f4c95d;
+    font-size: clamp(1rem, 1.8vw, 1.5rem);
+    line-height: 1.4;
+    font-weight: 600;
+    letter-spacing: 0;
+}
+
+.bannerText h3::before,
+.bannerText h3::after {
+    width: clamp(24px, 6vw, 72px);
+    height: 4px;
+    background-color: currentColor;
+    content: "";
+}
